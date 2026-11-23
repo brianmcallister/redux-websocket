@@ -12,8 +12,6 @@ import reducer from './store/reducer';
 
 import './styles/style.scss';
 
-const { NODE_ENV } = process.env;
-
 const websocketMiddleware = websocket({
   prefix: WEBSOCKET_PREFIX,
   onOpen: (socket: WebSocket) => {
@@ -75,19 +73,6 @@ const store = createStore(
     instrument()
   )
 );
-
-// Check for a localStorage value to see if we've seen this user before.
-const user = localStorage.getItem('user');
-
-if (!user) {
-  localStorage.setItem('user', '👋');
-
-  // eslint-disable-next-line no-underscore-dangle
-  if (NODE_ENV === 'production' && window._StatHat) {
-    // eslint-disable-next-line no-underscore-dangle
-    window._StatHat.push(['_trackCount', '8ITYG3NogZcXeGCJlriMyCBXN3dl', 1.0]);
-  }
-}
 
 ReactDOM.render(
   <Provider store={store}>

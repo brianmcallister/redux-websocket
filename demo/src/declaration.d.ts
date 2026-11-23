@@ -4,9 +4,3 @@ declare const process: {
     NODE_ENV: 'development' | 'production';
   };
 };
-
-interface Window {
-  _StatHat: {
-    push: (args: [string, string, number]) => void;
-  };
-}

@@ -60,7 +60,7 @@ const App = ({ clear }: Props): React.ReactElement<null> => (
               </Link>
 
               <Link
-                href="https://github.com/giantmachines/redux-websocket"
+                href="https://github.com/brianmcallister/redux-websocket"
                 target="_blank"
               >
                 GitHub

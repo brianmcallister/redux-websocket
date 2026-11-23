@@ -2,6 +2,8 @@
 
 > ⚠️⚠️⚠️ **NOTE: This project will be entering maintenance mode for the forseeable future so that we can focus on other internal initiatives. We thank you for using our library and hope that it has been useful to you! Please feel free to fork a version of `@giantmachines/redux-websocket` if you would like to expand on it or run into any significant issues or bugs that require a major change. The last stable version will be `v1.5.1`**.
 
+> This repository is a restored copy of `giantmachines/redux-websocket`, which is no longer on GitHub. Its history comes from a fork that mirrored the original.
+
 `redux-websocket` is a Redux middleware for managing data over a WebSocket connection.
 
 This middleware uses actions to interact with a WebSocket connection including connecting, disconnecting, sending messages, and receiving messages. All actions follow the [Flux Standard Action](https://github.com/acdlite/flux-standard-action) model.
@@ -13,6 +15,12 @@ This middleware uses actions to interact with a WebSocket connection including c
 - Connect to multiple WebSocket streams by creating multiple middleware instances.
 - Handle WebSocket events with Redux middleware, integrate with Saga, and use reducers to persist state.
 - Automatically handle reconnection.
+
+## Demo
+
+Live demo: [https://brianmcallister.github.io/redux-websocket/](https://brianmcallister.github.io/redux-websocket/)
+
+The demo connects to [Postman's public echo server](https://blog.postman.com/postman-echo-websocket/) by default, and you can enter any other server URL in its control panel. To run it locally, see [`demo/README.md`](demo/README.md).
 
 ## Installation
 

@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giantmachines/redux-websocket.git"
+    "url": "git+https://github.com/brianmcallister/redux-websocket.git"
   },
   "keywords": [
     "redux",

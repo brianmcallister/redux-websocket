@@ -18,8 +18,6 @@ import {
   StatusContents,
 } from './styles';
 
-const { NODE_ENV } = process.env;
-
 interface Props {
   connected: boolean;
   connect: (url: string) => void;
@@ -40,7 +38,7 @@ class Controls extends React.Component<Props, State> {
   // State.
   state = {
     message: '',
-    webSocketUrl: 'wss://websocket-echo-server.herokuapp.com',
+    webSocketUrl: 'wss://ws.postman-echo.com/raw',
   };
 
   /**
@@ -85,19 +83,6 @@ class Controls extends React.Component<Props, State> {
     } catch {
       // eslint-disable-next-line no-alert
       alert('Please enter valid JSON!');
-    }
-
-    // eslint-disable-next-line no-underscore-dangle
-    if (NODE_ENV === 'production' && window._StatHat) {
-      // eslint-disable-next-line no-underscore-dangle
-      window._StatHat.push([
-        '_trackCount',
-        'OFVGkOrEGgqsRvILIx99ZiA2VTFD',
-        1.0,
-      ]);
-    } else {
-      // eslint-disable-next-line no-console
-      console.warn('Not sending count to StatHat. NODE_ENV =', NODE_ENV);
     }
   };
 
