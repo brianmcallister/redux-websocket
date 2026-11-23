@@ -42,7 +42,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            // Dart Sass. node-sass no longer builds on current Node versions.
+            options: { implementation: require('sass') },
+          },
+        ],
       },
     ],
   },
